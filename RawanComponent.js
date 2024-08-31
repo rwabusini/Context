@@ -1,28 +1,33 @@
-import React, { useContext } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { UserContext } from './UserContext';
+import React ,{ useContext} from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import {UserContext} from './UserContext';
 
 
 const RawanComponent = () => {
-  const { user } = useContext(UserContext);
+    const userContext = useContext(UserContext);
+    console.log( "Rawan component" , userContext);
+    // console.log( "user context" , UserContext)
+    const {user, setUser} = userContext;
 
-  return (
-    <View style={styles.container}> 
-      <Text>Name: {user.name}</Text>
-      <Text>Age: {user.age}</Text> 
-      <Text>Email: {user.email}</Text>
-    </View>
-  );
+    return (
+        <View style={styles.container}>
+        <Text>Hello {user.name}!</Text>
+        <Text>Hello {user.age}!</Text>
+        <Button title="Change Name" onPress={() => setUser({...user, name: user.name+'_new'})}/>
+        <Button title="Change Age" onPress={() => setUser({...user, age: user.age+1})}/>
+        </View>
+    );
 };
+
+const styles = StyleSheet.create({
+    container: { 
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 10,
+    },
+});
 
 export default RawanComponent;
 
-const styles = StyleSheet.create({
-  container: { 
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 10,
-  }
-});
