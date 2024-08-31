@@ -1,23 +1,40 @@
+Here is the entire content formatted in Markdown:
+
+```markdown
 # Project Setup Instructions
 
 Follow these steps to set up and use this React Native project on your local machine.
 
-## 1. Fork the repository to your Github
-## 2. Clone the Repository
-First, clone the repository to your local machine. 
- git clone <repository-url>
+1. **Fork the repository** to your GitHub.
 
-## 3. Open in VS Code then in terminal and run the following commands:
+2. **Clone the repository** to your local machine:
+   ```bash
+   git clone <repository-url>
+   ```
 
-## 4. Navigate into the repository directory
- cd Context
+3. **Open the project** in Visual Studio Code, then in the terminal, run the following commands:
 
- ## 5. Install the dependencies
- npm install or Yarn install
+   - **Navigate into the repository directory**:
+     ```bash
+     cd Context
+     ```
 
-## Run the project files
-npx expo start 
+   - **Install the dependencies** using either of the following commands:
+     ```bash
+     npm install
+     ```
+     or
+     ```bash
+     yarn install
+     ```
 
-› Press a │ open Android
-› Press i │ open iOS simulator
-› Press w │ open web
+   - **Run the project** using Expo:
+     ```bash
+     npx expo start
+     ```
+
+4. Once Expo starts, you can choose how to open the project:
+   - Press `a` to open on Android.
+   - Press `i` to open on iOS simulator.
+   - Press `w` to open on the web.
+```
